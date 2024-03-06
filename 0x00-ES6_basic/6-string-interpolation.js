@@ -1,3 +1,4 @@
+//  Take advantage of template literals
 export default function getSanFranciscoDescription() {
     const year = 2017;
     const budget = {
