@@ -1,17 +1,16 @@
 export const taskFirst = () => {
-  const task = 'I prefer const when I can.'
-  return task
+  const task = 'I prefer const when I can.';
+  return task;
+};
+
+export function getLast() {
+  return ' is okay';
 }
 
-export function getLast () {
-  return ' is okay'
-}
+const taskNext = () => {
+  let combination = 'But sometimes let';
+  combination += getLast();
 
-// eslint-disable-next-line prefer-const
-let taskNext = () => {
-  let combination = 'But sometimes let'
-  combination += getLast()
-
-  return combination
-}
-export { taskNext }
+  return combination;
+};
+export { taskNext };
