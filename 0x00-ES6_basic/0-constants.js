@@ -1,18 +1,15 @@
-/* eslint-disable prefer-const */
-/* eslint-disable import/no-mutable-exports */
-export const taskFirst = () => {
+export function taskFirst() {
   const task = 'I prefer const when I can.';
   return task;
-};
+}
 
 export function getLast() {
   return ' is okay';
 }
 
-let taskNext = () => {
+export function taskNext() {
   let combination = 'But sometimes let';
   combination += getLast();
 
   return combination;
-};
-export { taskNext };
+}
