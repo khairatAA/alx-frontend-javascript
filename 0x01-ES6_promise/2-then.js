@@ -5,7 +5,8 @@ const handleResponseFromAPI = (promise) => promise
       status: 200,
       body: 'Success',
     }
-  ), console.log('Got a response from the API'))
-  .catch(() => (Error()));
+  ))
+  .catch(() => (Error()))
+  .finally(() => { console.log('Got a response from the API'); });
 
 export default handleResponseFromAPI;
