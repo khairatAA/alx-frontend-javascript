@@ -1,41 +1,42 @@
+// Getters and Setters
 export default class HolbertonCourse {
-  constructor(name, length, students) {
-    this._name = name;
-    this._length = length;
-    this._students = students;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  set name(value) {
-    if (typeof value !== 'string') {
-      Error('Name must be a string');
+    constructor(name, length, students) {
+        this._name = name;
+        this._length = length;
+        this._students = students;
     }
 
-    this._name = value;
-  }
-
-  get length() {
-    return this._length;
-  }
-
-  set length(value) {
-    if (typeof value !== 'number') {
-      throw Error('Length must be a number');
+    get name() {
+        return this._name;
     }
-    this._length = value;
-  }
 
-  get students() {
-    return this._students;
-  }
+    set name(name) {
+        if (typeof name !== 'string') {
+            throw new Error('Name must be a string');
+        }
 
-  set students(value) {
-    if (!Array.isArray(value)) {
-      Error('Student must be an array');
+        this._name = name;
     }
-    this._students = value;
-  }
+
+    get length() {
+        return this._length;
+    }
+
+    set length(length) {
+        if (typeof length !== 'number') {
+            throw new Error('Length must be a number');
+        }
+        this._length = length;
+    }
+
+    get students() {
+        return this._students;
+    }
+
+    set students(students) {
+        if (!Array.isArray(students)) {
+            throw new Error('Student must be an array');
+        }
+        this._students = students;
+    }
 }
