@@ -1,9 +1,13 @@
 // Clean Set
 export default function cleanSet(set, startString) {
+  if (!(set instanceof Set) || typeof startString !== 'string' || startString.length === 0) {
+    return '';
+  }
+
   let result = '';
 
   for (const value of set) {
-    if (startString !== '' && value.startsWith(startString)) {
+    if (value.startsWith(startString)) {
       const reminder = value.substring(startString.length);
       result += `${reminder}-`;
     }
